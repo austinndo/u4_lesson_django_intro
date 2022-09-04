@@ -1,4 +1,3 @@
-import logo from './logo.svg'
 import './App.css'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
@@ -16,9 +15,8 @@ function App() {
   useEffect(() => {
     const getArtists = async () => {
       let res = await axios.get(`${URL}`)
-      console.log(res)
-      console.log(res.data)
-      setArtist(res)
+      setArtist(res.data)
+      console.log(artists)
     }
     getArtists()
   }, [])
@@ -81,6 +79,17 @@ function App() {
         </div>
         <button>Sign Up</button>
       </form>
+
+      <div>
+        {artists.map((artist) => (
+          <div key={artist.id}>
+            <h2>{artist.id}</h2>
+            <h2>{artist.name}</h2>
+            <h2>{artist.nationality}</h2>
+            <h2>-------------------------</h2>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
