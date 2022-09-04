@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
 
@@ -42,7 +43,6 @@ INSTALLED_APPS = [
     'rest_framework'
 ]
 
-CORS_ALLOW_ALL_ORIGINS: 'True'
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
