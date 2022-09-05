@@ -78,7 +78,7 @@ function App() {
             required
           />
         </div>
-        <button>Sign Up</button>
+        <button>Add Artist</button>
       </form>
 
       <div>
