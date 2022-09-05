@@ -2,8 +2,7 @@ import './App.css'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 
-const URL =
-  'postgres://tunruser:SOlHt1ex4yaI5kMUk3gS6TeiswLJBgk1@dpg-ccamc8en6mponmv6ek1g-a.oregon-postgres.render.com/tunr'
+const URL = 'http://localhost:8000/'
 
 function App() {
   const [artists, setArtist] = useState([])
