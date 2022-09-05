@@ -19,7 +19,7 @@ function App() {
       console.log(artists)
     }
     getArtists()
-  }, [])
+  }, [artists])
 
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value })
